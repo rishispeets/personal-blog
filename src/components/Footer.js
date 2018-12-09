@@ -65,6 +65,7 @@ const Footer = () => (
         >
           <img
             src="https://www.netlify.com/img/global/badges/netlify-light.svg"
+            width={{ width: '100px' }}
             alt="Deploys by Netlify"
           />
         </a>
