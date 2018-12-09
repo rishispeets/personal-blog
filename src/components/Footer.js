@@ -59,19 +59,24 @@ const Footer = () => (
       </Item>
       <Item>
         <a
+          href="https://www.netlify.com"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            src="https://www.netlify.com/img/global/badges/netlify-light.svg"
+            alt="Deploys by Netlify"
+          />
+        </a>
+      </Item>
+      <Item>
+        Design{' '}
+        <a
           href="https://github.com/ryanwiemer/gatsby-starter-gcn"
           target="_blank"
           rel="noopener noreferrer"
         >
-          gatsby-starter-gcn
-        </a>{' '}
-        by{' '}
-        <a
-          href="https://github.com/ryanwiemer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @ryanwiemer
+          Ryan Wiemer
         </a>
       </Item>
     </List>
