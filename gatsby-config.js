@@ -44,6 +44,14 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-embed-gist',
+            options: {
+              // a flag indicating whether the github default gist css should be included or not
+              // default: true
+              includeDefaultCss: true,
+            },
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
           },
           `gatsby-remark-autolink-headers`,
@@ -160,21 +168,6 @@ module.exports = {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         color: config.themeColor,
-      },
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-embed-gist',
-            options: {
-              // a flag indicating whether the github default gist css should be included or not
-              // default: true
-              includeDefaultCss: true,
-            },
-          },
-        ],
       },
     },
     'gatsby-plugin-netlify',
