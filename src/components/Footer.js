@@ -46,6 +46,20 @@ const Footer = () => (
     <List>
       <Item>
         <a
+          href="https://www.netlify.com"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+        >
+          <div style={{ width: '100px' }}>
+            <img
+              src="https://www.netlify.com/img/global/badges/netlify-light.svg"
+              alt="Deploys by Netlify"
+            />
+          </div>
+        </a>
+      </Item>
+      <Item>
+        <a
           href="https://www.contentful.com/"
           rel="nofollow noopener noreferrer"
           target="_blank"
@@ -54,19 +68,6 @@ const Footer = () => (
             src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
             style={{ width: '100px' }}
             alt="Powered by Contentful"
-          />
-        </a>
-      </Item>
-      <Item>
-        <a
-          href="https://www.netlify.com"
-          rel="nofollow noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            src="https://www.netlify.com/img/global/badges/netlify-light.svg"
-            width={{ width: '100px' }}
-            alt="Deploys by Netlify"
           />
         </a>
       </Item>
