@@ -51,7 +51,7 @@ const Menu = () => {
         <ul>
           <li>
             <Link to="/" style={{color: 'black'}}>
-              Rishi Speets
+              rishi speets
             </Link>
           </li>
           <li>
