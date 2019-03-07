@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components';
 import Layout from '../components/Layout'
 import CardList from '../components/CardList'
 import Card from '../components/Card'
 import Helmet from 'react-helmet'
 import Container from '../components/Container'
 import Pagination from '../components/Pagination'
+import Author from '../components/Author'
 import SEO from '../components/SEO'
 import config from '../utils/siteConfig'
 
+const CardSectionHeading = styled.h1`
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  padding: 1em;
+`
+
+// TODO: Extract card section into different component
 const Index = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
   const featuredPost = posts[0].node
@@ -25,12 +36,16 @@ const Index = ({ data, pageContext }) => {
       )}
       <Container>
         {isFirstPage ? (
-          <CardList>
-            <Card {...featuredPost} featured />
-            {posts.slice(1).map(({ node: post }) => (
-              <Card key={post.id} {...post} />
-            ))}
-          </CardList>
+          <Fragment>
+            <Author />
+            <CardSectionHeading>Recent Articles</CardSectionHeading>
+            <CardList>
+              <Card {...featuredPost} featured />
+              {posts.slice(1).map(({ node: post }) => (
+                <Card key={post.id} {...post} />
+              ))}
+            </CardList>
+          </Fragment>
         ) : (
           <CardList>
             {posts.map(({ node: post }) => (
