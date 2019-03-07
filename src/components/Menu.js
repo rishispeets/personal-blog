@@ -30,18 +30,18 @@ const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    color: DarkGray;
+    color: rgb(102,102,102);
     font-weight: 600;
     transition: all 0.2s;
     border-bottom: 2px solid ${props => props.theme.colors.base};
     &:hover {
-      color: white;
+      text-decoration-line: underline;
     }
   }
 `
 
 const activeLinkStyle = {
-  color: 'white',
+  color: 'darkgrey',
 }
 
 const Menu = () => {
@@ -50,7 +50,7 @@ const Menu = () => {
       <Nav>
         <ul>
           <li>
-            <Link to="/" activeStyle={activeLinkStyle}>
+            <Link to="/" style={{color: 'black'}}>
               Rishi Speets
             </Link>
           </li>

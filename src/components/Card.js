@@ -25,7 +25,7 @@ const Post = styled.li`
     flex-flow: column;
     height: 100%;
     width: 100%;
-    color: ${props => props.theme.colors.base};
+    color: black;
     text-decoration: none;
     .gatsby-image-wrapper {
       height: 0;
@@ -51,6 +51,7 @@ const Date = styled.h3`
 
 const Excerpt = styled.p`
   margin: 0 1rem 1rem 1rem;
+  color: rgb(102,102,102);
   line-height: 1.6;
 `
 
@@ -58,7 +59,7 @@ const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {
   return (
     <Post featured={props.featured}>
       <Link to={`/${slug}/`}>
-        <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
+        {heroImage && <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />}
         <Title>{title}</Title>
         <Date>{publishDate}</Date>
         <Excerpt
