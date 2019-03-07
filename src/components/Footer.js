@@ -71,16 +71,6 @@ const Footer = () => (
           />
         </a>
       </Item>
-      <Item>
-        Design{' '}
-        <a
-          href="https://github.com/ryanwiemer/gatsby-starter-gcn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ryan Wiemer
-        </a>
-      </Item>
     </List>
   </Wrapper>
 )
