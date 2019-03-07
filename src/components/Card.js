@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 const Post = styled.li`
   position: relative;
   border: 1px solid ${props => props.theme.colors.secondary};
-  border-radius: 2px;
+  border-radius: 15px;
   margin: 0 0 1em 0;
   width: 100%;
   transition: background 0.2s;
@@ -25,7 +25,7 @@ const Post = styled.li`
     flex-flow: column;
     height: 100%;
     width: 100%;
-    color: ${props => props.theme.colors.base};
+    color: black;
     text-decoration: none;
     .gatsby-image-wrapper {
       height: 0;
@@ -38,7 +38,7 @@ const Post = styled.li`
 `
 
 const Title = styled.h2`
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 600;
   text-transform: capitalize;
   margin: 1rem 1rem 0.5rem 1rem;
@@ -51,6 +51,7 @@ const Date = styled.h3`
 
 const Excerpt = styled.p`
   margin: 0 1rem 1rem 1rem;
+  color: rgb(102,102,102);
   line-height: 1.6;
 `
 
@@ -58,7 +59,7 @@ const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {
   return (
     <Post featured={props.featured}>
       <Link to={`/${slug}/`}>
-        <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
+        {heroImage && <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />}
         <Title>{title}</Title>
         <Date>{publishDate}</Date>
         <Excerpt

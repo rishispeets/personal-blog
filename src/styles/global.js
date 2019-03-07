@@ -84,7 +84,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: white;
     line-height: 1;
-    font-size: 100%;
+    font-size: 120%;
     font-variant-ligatures: none;
     text-rendering: optimizeLegibility;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
