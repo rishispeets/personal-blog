@@ -55,7 +55,7 @@
     "clean": "rm -rf public .cache"
   },
   "devDependencies": {
-    "eslint": "5.7.0",
+    "eslint": "5.15.3",
     "eslint-config-gatsby-standard": "2.1.1",
     "prettier": "1.16.4",
     "stylelint": "9.6.0",
