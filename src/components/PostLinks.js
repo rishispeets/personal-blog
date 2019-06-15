@@ -14,8 +14,8 @@ const Box = styled.div`
   width: 100%;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
   a {
-    background: ${props => props.theme.colors.base};
-    color: white;
+    background: ${props => props.theme.colors.secondary};
+    color: #666666;
     padding: 1em;
     border-radius: 2px;
     text-decoration: none;
