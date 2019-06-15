@@ -8,12 +8,14 @@ const Wrapper = styled.div`
 `
 
 export default function DisqusWrapper({ postId, postTitle }) {
+const pathName = window.location.pathname || ""
+
   return (
     <Wrapper>
       <Disqus
         identifier={postId}
         title={postTitle}
-        url={`${siteUrl}${location.pathname}`}
+        url={`${siteUrl}${pathName}`}
       />
     </Wrapper>
   )
