@@ -7,6 +7,7 @@ import Hero from '../components/Hero'
 import Container from '../components/Container'
 import PageBody from '../components/PageBody'
 import TagList from '../components/TagList'
+import DisqusWrapper from '../components/Disqus'
 import PostLinks from '../components/PostLinks'
 import PostDate from '../components/PostDate'
 import SEO from '../components/SEO'
@@ -40,6 +41,7 @@ const PostTemplate = ({ data, pageContext }) => {
         <PageBody body={body} />
       </Container>
       <PostLinks previous={previous} next={next} />
+      <DisqusWrapper postId={slug} postTitle={title} />
     </Layout>
   )
 }
