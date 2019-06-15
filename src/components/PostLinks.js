@@ -22,6 +22,7 @@ const Box = styled.div`
     transition: 0.2s;
     &:hover {
       background: ${props => props.theme.colors.highlight};
+      color: ${props => props.theme.colors.base}
     }
   }
 `
