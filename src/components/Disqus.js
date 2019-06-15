@@ -13,8 +13,12 @@ export default function DisqusWrapper({ postId, postTitle }) {
       <Disqus
         identifier={postId}
         title={postTitle}
-        url={`${siteUrl}${location.pathname}`}
+        url={`${siteUrl}${getPathname()}`}
       />
     </Wrapper>
   )
+}
+
+function getPathname() {
+  return window ? window.location.pathname : ''
 }
