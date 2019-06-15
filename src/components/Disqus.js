@@ -20,5 +20,6 @@ export default function DisqusWrapper({ postId, postTitle }) {
 }
 
 function getPathname() {
-  return window ? window.location.pathname : ''
+  if (typeof window !== `undefined`) return window.location.pathname
+  else return ''
 }
