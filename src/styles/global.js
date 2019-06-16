@@ -83,7 +83,6 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background: white;
-    line-height: 1;
     font-size: 120%;
     font-variant-ligatures: none;
     text-rendering: optimizeLegibility;
