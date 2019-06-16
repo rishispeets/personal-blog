@@ -19,7 +19,8 @@ const Post = styled.li`
     flex: ${props => (props.featured ? '0 0 100%' : '0 0 32%')};
   }
   &:hover {
-    background: ${props => props.theme.colors.tertiary};
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease-in-out;
   }
   a {
     display: flex;
