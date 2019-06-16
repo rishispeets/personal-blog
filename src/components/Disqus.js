@@ -1,6 +1,7 @@
 import React from 'react'
 import Disqus from 'gatsby-plugin-disqus'
 import { siteUrl } from '../utils/siteConfig'
+import { getPathname } from '../utils/pathName'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -17,9 +18,4 @@ export default function DisqusWrapper({ postId, postTitle }) {
       />
     </Wrapper>
   )
-}
-
-function getPathname() {
-  if (typeof window !== `undefined`) return window.location.pathname
-  else return ''
 }
