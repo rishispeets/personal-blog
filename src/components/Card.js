@@ -6,6 +6,7 @@ import Img from 'gatsby-image'
 const Post = styled.li`
   position: relative;
   border: 1px solid ${props => props.theme.colors.secondary};
+  background-color: white;
   border-radius: 15px;
   margin: 0 0 1em 0;
   width: 100%;
@@ -18,7 +19,8 @@ const Post = styled.li`
     flex: ${props => (props.featured ? '0 0 100%' : '0 0 32%')};
   }
   &:hover {
-    background: ${props => props.theme.colors.tertiary};
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease-in-out;
   }
   a {
     display: flex;
@@ -51,7 +53,7 @@ const Date = styled.h3`
 
 const Excerpt = styled.p`
   margin: 0 1rem 1rem 1rem;
-  color: rgb(102,102,102);
+  color: rgb(102, 102, 102);
   line-height: 1.6;
 `
 
@@ -59,7 +61,13 @@ const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {
   return (
     <Post featured={props.featured}>
       <Link to={`/${slug}/`}>
-        {heroImage && <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />}
+        {heroImage && (
+          <Img
+            style={{ 'border-radius': '15px 15px 0 0' }}
+            fluid={heroImage.fluid}
+            backgroundColor={'#eeeeee'}
+          />
+        )}
         <Title>{title}</Title>
         <Date>{publishDate}</Date>
         <Excerpt

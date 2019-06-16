@@ -6,6 +6,7 @@ const Header = styled.header`
   background: ${props => props.theme.colors.base};
   width: 100%;
   padding: 1.5em 0;
+  border-bottom: 1px solid ${props => props.theme.colors.secondary};
 `
 const Nav = styled.nav`
   width: 100%;
@@ -30,7 +31,7 @@ const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    color: rgb(102,102,102);
+    color: rgb(102, 102, 102);
     font-weight: 600;
     transition: all 0.2s;
     border-bottom: 2px solid ${props => props.theme.colors.base};
@@ -50,7 +51,7 @@ const Menu = () => {
       <Nav>
         <ul>
           <li>
-            <Link to="/" style={{color: 'black'}}>
+            <Link to="/" style={{ color: 'black' }}>
               rishi speets
             </Link>
           </li>
