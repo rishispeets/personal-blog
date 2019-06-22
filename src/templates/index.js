@@ -29,12 +29,6 @@ const Index = ({ data, pageContext }) => {
             ))}
           </ArticleList>
         </Fragment>
-        ) : (
-        <ArticleList>
-          {posts.map(({ node: post }) => (
-            <Article key={post.id} {...post} />
-          ))}
-        </ArticleList>
       </Container>
       <Pagination context={pageContext} />
     </Layout>
