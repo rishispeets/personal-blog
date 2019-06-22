@@ -1,13 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
 
 const Post = styled.li`
   position: relative;
-  border: 1px solid ${props => props.theme.colors.secondary};
-  background-color: white;
-  border-radius: 15px;
   margin: 0 0 1em 0;
   width: 100%;
   transition: background 0.2s;
@@ -17,10 +13,6 @@ const Post = styled.li`
   }
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     flex: ${props => (props.featured ? '0 0 100%' : '0 0 32%')};
-  }
-  &:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease-in-out;
   }
   a {
     display: flex;
@@ -51,30 +43,12 @@ const Date = styled.h3`
   color: gray;
 `
 
-const Excerpt = styled.p`
-  margin: 0 1rem 1rem 1rem;
-  color: rgb(102, 102, 102);
-  line-height: 1.6;
-`
-
 const Article = ({ slug, heroImage, title, publishDate, body, ...props }) => {
   return (
     <Post featured={props.featured}>
+      <Date>{publishDate}</Date>
       <Link to={`/${slug}/`}>
-        {heroImage && (
-          <Img
-            style={{ 'border-radius': '15px 15px 0 0' }}
-            fluid={heroImage.fluid}
-            backgroundColor={'#eeeeee'}
-          />
-        )}
         <Title>{title}</Title>
-        <Date>{publishDate}</Date>
-        <Excerpt
-          dangerouslySetInnerHTML={{
-            __html: body.childMarkdownRemark.excerpt,
-          }}
-        />
       </Link>
     </Post>
   )
