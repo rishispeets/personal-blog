@@ -4,8 +4,8 @@ import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import Card from '../components/Card'
-import CardList from '../components/CardList'
+import Article from '../components/Article'
+import ArticleList from '../components/ArticleList'
 import PageTitle from '../components/PageTitle'
 import Pagination from '../components/Pagination'
 import Container from '../components/Container'
@@ -53,11 +53,11 @@ const TagTemplate = ({ data, pageContext }) => {
           &rdquo;
         </PageTitle>
 
-        <CardList>
+        <ArticleList>
           {posts.slice(skip, limit * currentPage).map(post => (
-            <Card {...post} key={post.id} />
+            <Article {...post} key={post.id} />
           ))}
-        </CardList>
+        </ArticleList>
       </Container>
       <Pagination context={pageContext} />
     </Layout>

@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import CardList from '../components/CardList'
-import Card from '../components/Card'
+import ArticleList from '../components/ArticleList'
+import Article from '../components/Article'
 import Helmet from 'react-helmet'
 import Container from '../components/Container'
 import Pagination from '../components/Pagination'
@@ -13,33 +13,28 @@ const Index = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
   const featuredPost = posts[0].node
   const { currentPage } = pageContext
-  const isFirstPage = currentPage === 1
 
   return (
     <Layout>
       <SEO />
-      {!isFirstPage && (
-        <Helmet>
-          <title>{`${config.siteTitle} - Page ${currentPage}`}</title>
-        </Helmet>
-      )}
+      <Helmet>
+        <title>{`${config.siteTitle} - Page ${currentPage}`}</title>
+      </Helmet>
       <Container>
-        {isFirstPage ? (
-          <Fragment>
-            <CardList>
-              <Card {...featuredPost} featured />
-              {posts.slice(1).map(({ node: post }) => (
-                <Card key={post.id} {...post} />
-              ))}
-            </CardList>
-          </Fragment>
-        ) : (
-          <CardList>
-            {posts.map(({ node: post }) => (
-              <Card key={post.id} {...post} />
+        <Fragment>
+          <ArticleList>
+            <Article {...featuredPost} featured />
+            {posts.slice(1).map(({ node: post }) => (
+              <Article key={post.id} {...post} />
             ))}
-          </CardList>
-        )}
+          </ArticleList>
+        </Fragment>
+        ) : (
+        <ArticleList>
+          {posts.map(({ node: post }) => (
+            <Article key={post.id} {...post} />
+          ))}
+        </ArticleList>
       </Container>
       <Pagination context={pageContext} />
     </Layout>

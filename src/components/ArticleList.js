@@ -12,8 +12,8 @@ const List = styled.ul`
   }
 `
 
-const CardList = props => {
+const ArticleList = props => {
   return <List>{props.children}</List>
 }
 
-export default CardList
+export default ArticleList
