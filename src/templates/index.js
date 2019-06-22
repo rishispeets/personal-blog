@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
-import styled from 'styled-components';
+import styled from 'styled-components'
 import Layout from '../components/Layout'
 import CardList from '../components/CardList'
 import Card from '../components/Card'
 import Helmet from 'react-helmet'
 import Container from '../components/Container'
 import Pagination from '../components/Pagination'
-import Author from '../components/Author'
 import SEO from '../components/SEO'
 import config from '../utils/siteConfig'
 
@@ -37,7 +36,6 @@ const Index = ({ data, pageContext }) => {
       <Container>
         {isFirstPage ? (
           <Fragment>
-            <Author />
             <CardSectionHeading>Recent Articles</CardSectionHeading>
             <CardList>
               <Card {...featuredPost} featured />
