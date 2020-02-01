@@ -4,8 +4,7 @@ module.exports = {
   url: 'https://www.rishispeets.com',
   pathPrefix: '/',
   title: "Rishi's Notes",
-  subtitle:
-    'Web Developer',
+  subtitle: 'Web Developer',
   copyright: '© All rights reserved.',
   disqusShortname: 'rishispeets',
   postsPerPage: 4,
@@ -29,7 +28,7 @@ module.exports = {
     name: 'Rishi Speets',
     photo: '/photo.jpg',
     bio:
-      'Web Developer @RTL. Shepard of bits and bytes. Into books, travel and meditation. Based in the Netherlands.'
+      'Web Developer @RTL. Shepard of bits and bytes. Into books, travel and meditation. Based in the Netherlands.',
     contacts: {
       email: 'hi@rishispeets.com',
       facebook: '',
