@@ -17,10 +17,10 @@ try {
 
 module.exports = {
   siteMetadata: {
-    title: 'GCN',
+    title: 'Rishi Speets',
     description:
-      'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
-    siteUrl: 'https://gcn.netlify.com',
+      'Web Developer',
+    siteUrl: 'https://www.rishispeets.com',
     image: '/images/share.jpg',
     menuLinks: [
       {
