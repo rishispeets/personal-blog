@@ -36,13 +36,13 @@ const Nav = styled.nav`
     transition: all 0.2s;
     border-bottom: 2px solid ${props => props.theme.colors.text};
     &:hover {
-      color: DarkGrey;
+      color: LightGrey;
     }
   }
 `
 
 const activeLinkStyle = {
-  color: 'black',
+  color: 'DarkGrey',
 }
 
 const Menu = () => {
