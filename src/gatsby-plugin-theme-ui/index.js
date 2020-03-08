@@ -8,8 +8,10 @@ export default {
     highlight: '#5b8bf7',
   },
   fonts: {
+    header:
+      'Oswald, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     body:
-      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+      '"Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
   },
   sizes: {
     maxWidth: '1050px',

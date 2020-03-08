@@ -1,3 +1,7 @@
+/* eslint-disable import/first */
+require('typeface-open-sans')
+require('typeface-oswald')
+
 import React, { useEffect } from 'react'
 import styled from '@emotion/styled'
 import { Global } from '@emotion/core'
